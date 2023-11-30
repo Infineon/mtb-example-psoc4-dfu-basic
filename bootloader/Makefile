@@ -106,7 +106,7 @@ POSTBUILD=
 ################################################################################
 # Include additional configurations, source, headers and Macros.
 ################################################################################
-ifneq ($(TARGET), APP_CY8CKIT-040T) #CY8CKIT-040T supports only I2C as the transport
+ifneq ($(filter PSOC4000T,$(DEVICE_COMPONENTS)),) #CY8CKIT-040T and CY8CPROTO-040T supports only I2C as the transport
  ifeq ($(TRANSPORT_OPT), I2C)
   $(info Selected I2C transport for DFU.)
   DEFINES+=TRANSPORT_I2C
