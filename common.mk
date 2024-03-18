@@ -7,7 +7,7 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2022-2023, Cypress Semiconductor Corporation (an Infineon company)
+# Copyright 2022-2024, Cypress Semiconductor Corporation (an Infineon company)
 # SPDX-License-Identifier: Apache-2.0
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +27,8 @@ MTB_TYPE=PROJECT
 
 # Default DFU transport set to I2C.
 #
-# Supported options are I2C and UART.
+# Supported options are I2C and UART both for all the kits except CY8CKIT-040T
+# and CY8CPROTO-040T. CY8CKIT-040T and CY8CPROTO-040T supports only I2C transport.
 #
 # Select transport here, as required.
 TRANSPORT_OPT?=I2C

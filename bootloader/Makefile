@@ -106,26 +106,33 @@ POSTBUILD=
 ################################################################################
 # Include additional configurations, source, headers and Macros.
 ################################################################################
-ifneq ($(filter PSOC4000T,$(DEVICE_COMPONENTS)),) #CY8CKIT-040T and CY8CPROTO-040T supports only I2C as the transport
+ifeq ($(filter $(TARGET), APP_CY8CKIT-040T APP_CY8CPROTO-040T),$(TARGET)) #CY8CKIT-040T and CY8CPROTO-040T supports only I2C as the transport
+ 
+ ifeq ($(TRANSPORT_OPT), I2C)
+  $(info Selected I2C transport for DFU.)
+  TRANSPORT_OPT=I2C
+  DEFINES+=TRANSPORT_I2C
+  COMPONENTS+=DFU_I2C
+ else
+  $(error DFU transport not supported !.)
+ endif
+
+else
+ 
  ifeq ($(TRANSPORT_OPT), I2C)
   $(info Selected I2C transport for DFU.)
   DEFINES+=TRANSPORT_I2C
   COMPONENTS+=DFU_I2C
-
  else ifeq ($(TRANSPORT_OPT), UART)
   $(info Selected UART transport for DFU.)
   DEFINES+=TRANSPORT_UART
   COMPONENTS+=DFU_UART
  else
-  $(error Unknown DFU transport selected !.)
+  $(error DFU transport not supported !.)
  endif
 
-else
- $(info Selected I2C transport for DFU.)
- TRANSPORT_OPT=I2C
- DEFINES+=TRANSPORT_I2C
- COMPONENTS+=DFU_I2C
 endif
+
 
 
 # Transport opt should be in lowercase to pick the correct files for the build. 
