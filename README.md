@@ -16,11 +16,11 @@ This example bundles two applications:
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-dfu-basic)
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzYzOTUiLCJTcGVjIE51bWJlciI6IjAwMi0zNjM5NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJhc2ljIGRldmljZSBmaXJtd2FyZSB1cGdyYWRlIChERlUpIiwicmlkIjoiZGFzYXZpaml0IiwiRG9jIHZlcnNpb24iOiIyLjAuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzYzOTUiLCJTcGVjIE51bWJlciI6IjAwMi0zNjM5NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJhc2ljIGRldmljZSBmaXJtd2FyZSB1cGdyYWRlIChERlUpIiwicmlkIjoiZGFzYXZpaml0IiwiRG9jIHZlcnNpb24iOiIyLjEuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 ## Requirements
 
-- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.2)
+- [ModusToolbox&trade;](https://www.infineon.com/modustoolbox) v3.2 or later (tested with v3.3)
 - Board support package (BSP) minimum required version: 3.2.0
 
 - Programming language: C
@@ -31,7 +31,7 @@ This example bundles two applications:
 
 - GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) – Default value of `TOOLCHAIN`
 - Arm&reg; Compiler v6.16 (`ARM`)
-- IAR C/C++ Compiler v9.30.1 (`IAR`)
+- IAR C/C++ Compiler v9.50.2 (`IAR`)
 
 ## Supported kits (make variable 'TARGET')
 
@@ -499,6 +499,7 @@ Document title: *CE236395* - *PSoC&trade; 4: Basic device firmware upgrade (DFU)
  1.1.1   | Minor README update
  1.2.0   | Added support for CY8CPROTO-040T and updated to support ModusToolbox&reg; v3.1
  2.0.0   | README template update and bug fix in Makefile
+ 2.1.0   | Updated Flash memory allocation for CY8CKIT-040T to fix IAR compiler error
  
 <br>
 
